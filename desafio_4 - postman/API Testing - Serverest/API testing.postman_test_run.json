@@ -1,0 +1,267 @@
+{
+	"id": "87c1d055-ed00-427b-a2b6-e9ea344eab55",
+	"name": "API testing",
+	"timestamp": "2023-11-17T14:53:19.317Z",
+	"collection_id": "26659107-56c874bf-84c6-4942-9c3c-c7ffd93e49a7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-11-17T14:53:18.920Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "63f94785-c9b3-42a7-a931-1e5fd0d5488c",
+			"name": "POST /usuarios",
+			"url": "http://localhost:3000/usuarios",
+			"time": 8,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Usuario Cadastrado": false,
+				"O nome do status code tem o texto: Created": false,
+				"O tempo de resposta é menor que 150ms": true,
+				"Usuario Cadastrado já cadastrado": true,
+				"O nome do status code tem o texto: Bad Request": true
+			},
+			"testPassFailCounts": {
+				"Usuario Cadastrado": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O nome do status code tem o texto: Created": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O tempo de resposta é menor que 150ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Usuario Cadastrado já cadastrado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O nome do status code tem o texto: Bad Request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Usuario Cadastrado": false,
+					"O nome do status code tem o texto: Created": false,
+					"O tempo de resposta é menor que 150ms": true,
+					"Usuario Cadastrado já cadastrado": true,
+					"O nome do status code tem o texto: Bad Request": true
+				}
+			]
+		},
+		{
+			"id": "7f6440c0-3d37-4dcb-b4e3-2149bf563984",
+			"name": "POST /login",
+			"url": "http://localhost:3000/login",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Login realizado": true,
+				"O nome do status code tem o texto: OK": true
+			},
+			"testPassFailCounts": {
+				"Login realizado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O nome do status code tem o texto: OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Login realizado": true,
+					"O nome do status code tem o texto: OK": true
+				}
+			]
+		},
+		{
+			"id": "3fdf9469-47f4-46b3-ad64-ab42b9f4c66f",
+			"name": "GET /usuarios",
+			"url": "http://localhost:3000/usuarios/Rna1cXlAnMpzlv8N",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Usuarios Cadastrados": true,
+				"O nome do status code tem o texto: OK": true,
+				"O tempo de resposta é menor que 150ms": true
+			},
+			"testPassFailCounts": {
+				"Usuarios Cadastrados": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O nome do status code tem o texto: OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O tempo de resposta é menor que 150ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Usuarios Cadastrados": true,
+					"O nome do status code tem o texto: OK": true,
+					"O tempo de resposta é menor que 150ms": true
+				}
+			]
+		},
+		{
+			"id": "8b5b0ff8-a717-4a23-be17-84e4fdf20555",
+			"name": "POST /produtos",
+			"url": "http://localhost:3000/produtos",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Produto Cadastrado": false,
+				"O nome do status code tem o texto: Created": false,
+				"O tempo de resposta é menor que 150ms": true,
+				"Produto com o mesmo nome já cadastrado": false,
+				"O nome do status code tem o texto: Bad Request": false,
+				"Token de acesso inválido.": true,
+				"O nome do status code tem o texto: Unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Produto Cadastrado": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O nome do status code tem o texto: Created": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O tempo de resposta é menor que 150ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Produto com o mesmo nome já cadastrado": {
+					"pass": 0,
+					"fail": 1
+				},
+				"O nome do status code tem o texto: Bad Request": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Token de acesso inválido.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O nome do status code tem o texto: Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Produto Cadastrado": false,
+					"O nome do status code tem o texto: Created": false,
+					"O tempo de resposta é menor que 150ms": true,
+					"Produto com o mesmo nome já cadastrado": false,
+					"O nome do status code tem o texto: Bad Request": false,
+					"Token de acesso inválido.": true,
+					"O nome do status code tem o texto: Unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "dedf8ecd-edd9-4867-aaf0-1e3497569c27",
+			"name": "GET /produtos",
+			"url": "http://localhost:3000/produtos",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Produto Cadastrado": true,
+				"O nome do status code tem o texto: OK": true,
+				"O tempo de resposta é menor que 150ms": true
+			},
+			"testPassFailCounts": {
+				"Produto Cadastrado": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O nome do status code tem o texto: OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"O tempo de resposta é menor que 150ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Produto Cadastrado": true,
+					"O nome do status code tem o texto: OK": true,
+					"O tempo de resposta é menor que 150ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 25,
+	"collection": {
+		"requests": [
+			{
+				"id": "63f94785-c9b3-42a7-a931-1e5fd0d5488c",
+				"method": "POST"
+			},
+			{
+				"id": "7f6440c0-3d37-4dcb-b4e3-2149bf563984",
+				"method": "POST"
+			},
+			{
+				"id": "3fdf9469-47f4-46b3-ad64-ab42b9f4c66f",
+				"method": "GET"
+			},
+			{
+				"id": "8b5b0ff8-a717-4a23-be17-84e4fdf20555",
+				"method": "POST"
+			},
+			{
+				"id": "dedf8ecd-edd9-4867-aaf0-1e3497569c27",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,7 @@
+foi utilizado comando: npx serverest@latest
+disponibilizado no git, para realizar as requisições de forma local atraves da porta:  http://localhost:3000
+
+foi necessário criar login para poder ter acesso a criar um produto.
+para não dar erro de token de acesso, foi necessário copiar a autorização BEARER e colar manualmente
+em Authorization > Type > Bearer Token > codigo disponibilizado assim que realiza o login.
+para poder acrescentar um novo produto

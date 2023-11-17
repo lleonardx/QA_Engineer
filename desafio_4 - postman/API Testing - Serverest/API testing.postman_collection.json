@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "56c874bf-84c6-4942-9c3c-c7ffd93e49a7",
+		"name": "API testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26659107",
+		"_collection_link": "https://solar-water-610191.postman.co/workspace/api-correios~2ebd96fd-b0f2-4d41-a1e6-a037efd7de4e/collection/26659107-56c874bf-84c6-4942-9c3c-c7ffd93e49a7?action=share&source=collection_link&creator=26659107"
+	},
+	"item": [
+		{
+			"name": "/login",
+			"item": [
+				{
+					"name": "POST /login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//status code\r",
+									"pm.test(\"Login realizado\", function () {\r",
+									"pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+									"pm.response.to.have.status(\"OK\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"novo@qa.com.br\",\r\n    \"password\": \"teste1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}login",
+							"host": [
+								"{{URL}}login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/produtos",
+			"item": [
+				{
+					"name": "GET /produtos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//status code\r",
+									"pm.test(\"Produto Cadastrado\", function () {\r",
+									"pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+									"pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"//teste de tempo de resposta\r",
+									"pm.test(\"O tempo de resposta é menor que 150ms\", () => {\r",
+									"pm.expect(pm.response.responseTime).to.be.below(150);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vdm9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJ0ZXN0ZTEiLCJpYXQiOjE3MDAyMzEyNDEsImV4cCI6MTcwMDIzMTg0MX0.70f2YhI-gNmCZFPQQ854HdHX4fe41BUr_8UBD9ajDDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}produtos",
+							"host": [
+								"{{URL}}produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /produtos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//status code\r",
+									"pm.test(\"Produto Cadastrado\", function () {\r",
+									"pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: Created\", () => {\r",
+									"pm.response.to.have.status(\"Created\");\r",
+									"});\r",
+									"\r",
+									"//teste de tempo de resposta\r",
+									"pm.test(\"O tempo de resposta é menor que 150ms\", () => {\r",
+									"pm.expect(pm.response.responseTime).to.be.below(150);\r",
+									"});\r",
+									"\r",
+									"//status code - produto com o mesmo nome já cadastrado\r",
+									"pm.test(\"Produto com o mesmo nome já cadastrado\", function () {\r",
+									"pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: Bad Request\", () => {\r",
+									"pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									"\r",
+									"//status code - usuario com email cadastrado\r",
+									"pm.test(\"Token de acesso inválido.\", function () {\r",
+									"pm.response.to.have.status(401);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: Unauthorized\", () => {\r",
+									"pm.response.to.have.status(\"Unauthorized\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vdm9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJ0ZXN0ZTEiLCJpYXQiOjE3MDAyMzEyNDEsImV4cCI6MTcwMDIzMTg0MX0.70f2YhI-gNmCZFPQQ854HdHX4fe41BUr_8UBD9ajDDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Samsung Odyssey\",\r\n  \"preco\": 2500,\r\n  \"descricao\": \"Monitor\",\r\n  \"quantidade\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}produtos",
+							"host": [
+								"{{URL}}produtos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/usuarios",
+			"item": [
+				{
+					"name": "POST /usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//status code\r",
+									"pm.test(\"Usuario Cadastrado\", function () {\r",
+									"pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: Created\", () => {\r",
+									"pm.response.to.have.status(\"Created\");\r",
+									"});\r",
+									"\r",
+									"//teste de tempo de resposta\r",
+									"pm.test(\"O tempo de resposta é menor que 150ms\", () => {\r",
+									"pm.expect(pm.response.responseTime).to.be.below(150);\r",
+									"});\r",
+									"\r",
+									"//status code - usuario com email cadastrado\r",
+									"pm.test(\"Usuario Cadastrado já cadastrado\", function () {\r",
+									"pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: Bad Request\", () => {\r",
+									"pm.response.to.have.status(\"Bad Request\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Usuario teste\",\r\n    \"email\": \"novo@qa.com.br\",\r\n    \"password\": \"teste1\",\r\n    \"administrador\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}usuarios",
+							"host": [
+								"{{URL}}usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /usuarios",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//status code\r",
+									"pm.test(\"Usuarios Cadastrados\", function () {\r",
+									"pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"//Teste de resposta em texto do status code\r",
+									"pm.test(\"O nome do status code tem o texto: OK\", () => {\r",
+									"pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"//teste de tempo de resposta\r",
+									"pm.test(\"O tempo de resposta é menor que 150ms\", () => {\r",
+									"pm.expect(pm.response.responseTime).to.be.below(150);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}usuarios/Rna1cXlAnMpzlv8N",
+							"host": [
+								"{{URL}}usuarios"
+							],
+							"path": [
+								"Rna1cXlAnMpzlv8N"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vdm9AcWEuY29tLmJyIiwicGFzc3dvcmQiOiJ0ZXN0ZTEiLCJpYXQiOjE3MDAyMzEyNDEsImV4cCI6MTcwMDIzMTg0MX0.70f2YhI-gNmCZFPQQ854HdHX4fe41BUr_8UBD9ajDDo",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "{{baseurl}}"
+		},
+		{
+			"key": "URL",
+			"value": "http://localhost:3000/"
+		}
+	]
+}
