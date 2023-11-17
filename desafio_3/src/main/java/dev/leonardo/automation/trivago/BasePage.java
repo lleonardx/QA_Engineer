@@ -7,17 +7,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
 
+import javax.swing.*;
+import java.awt.*;
 import java.time.Duration;
+import java.util.Random;
 
 public abstract class BasePage {
     private WebDriver driver;
     private WebDriverWait wait;
+    private Actions actions;
 
     public BasePage(){
         System.getProperty("webdriver.chrome.driver", "drivers/chromedriver");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        this.driver = new ChromeDriver();
+        this.driver.manage().window().maximize();
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.actions = new Actions(driver);
     }
     public void visit(String url) {
         this.driver.get(url);
@@ -66,5 +73,20 @@ public abstract class BasePage {
         return this.driver;
     }
 
+    public void clickRandomLocation() throws AWTException {
+        // Obter as dimensões da janela do navegador
+        int windowWidth = driver.manage().window().getSize().width;
+        int windowHeight = driver.manage().window().getSize().height;
+
+        // Criar uma instância da classe Random
+        Random random = new Random();
+
+        // Gerar coordenadas aleatórias dentro das dimensões da janela
+        int randomX = random.nextInt(windowWidth);
+        int randomY = random.nextInt(windowHeight);
+
+        // Usar a classe Actions para mover o cursor para a posição aleatória e clicar
+        actions.moveByOffset(randomX, randomY).click().perform();
+    }
 
 }

@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../desafio_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2YHb5yTRRugytEFZyJX3ZxXHWT2" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,7 +45,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/desafio_qa/QA_Engineer/desafio_3",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
   <component name="RecentsManager">

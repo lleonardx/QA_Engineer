@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+import java.awt.*;
+
 class BuscarManausTest {
     private BuscarManaus buscarManaus;
     private final String URL = "https://www.trivago.com.br/";
@@ -18,7 +20,7 @@ class BuscarManausTest {
         //buscarManaus.quitWebDriver();
     }
     @Test
-    void test(){
+    void test() throws AWTException {
         buscarManaus.inserirDestino();
     }
 }
