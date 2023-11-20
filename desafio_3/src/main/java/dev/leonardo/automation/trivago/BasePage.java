@@ -125,8 +125,8 @@ public abstract class BasePage {
         Random random = new Random();
 
         // Gerar coordenadas aleatórias dentro das dimensões da janela
-        int randomX = random.nextInt(windowWidth);
-        int randomY = random.nextInt(windowHeight);
+        int randomX = random.nextInt(windowWidth -50);
+        int randomY = random.nextInt(windowHeight -50);
 
         // Usar a classe Actions para mover o cursor para a posição aleatória e clicar
         action.moveByOffset(randomX, randomY).click().perform();

@@ -25,6 +25,7 @@ public class BuscarManaus extends BasePage {
     private By subMenuSugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
     private By titlePageSugestionLocator = By.cssSelector("#sorting-selector");
     private By sugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
+    private By avaliationLocator = By.xpath("//*[@id=\"__next\"]/div/main/div[3]/div[1]/div[1]/div[2]/div/div/ol/li[1]/div/article/div[2]/div[1]/button[2]");
 
     public void inserirDestino() throws AWTException, InterruptedException {
         super.findElement(cityNameLocator).click();
@@ -51,7 +52,12 @@ public class BuscarManaus extends BasePage {
             super.selectByVisibleText(subMenuSugestionLocator, opcaoVisivel);
             super.click(sugestionLocator);
             Thread.sleep(5000);
-            super.clickRandomLocation();
+            //super.clickRandomLocation();
+            //Thread.sleep(5000);
+
+            super.findElement(avaliationLocator);
+            super.click(avaliationLocator);
+            Thread.sleep(3000);
             super.takeScreenshot("sugestao");
         }else{
             System.out.println("menu sugestion was not found");
