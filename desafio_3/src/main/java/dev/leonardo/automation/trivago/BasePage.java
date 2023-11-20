@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.interactions.Actions;
 
@@ -17,14 +18,14 @@ import java.util.Random;
 public abstract class BasePage {
     private WebDriver driver;
     private WebDriverWait wait;
-    private Actions actions;
+    private Actions action;
+    private Select select;
 
     public BasePage(){
         System.getProperty("webdriver.chrome.driver", "drivers/chromedriver");
         this.driver = new ChromeDriver();
         this.driver.manage().window().maximize();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        this.actions = new Actions(driver);
     }
     public void visit(String url) {
         this.driver.get(url);
@@ -72,21 +73,23 @@ public abstract class BasePage {
     public WebDriver getDriver() {
         return this.driver;
     }
-
-    public void clickRandomLocation() throws AWTException {
-        // Obter as dimensões da janela do navegador
-        int windowWidth = driver.manage().window().getSize().width;
-        int windowHeight = driver.manage().window().getSize().height;
-
-        // Criar uma instância da classe Random
-        Random random = new Random();
-
-        // Gerar coordenadas aleatórias dentro das dimensões da janela
-        int randomX = random.nextInt(windowWidth);
-        int randomY = random.nextInt(windowHeight);
-
-        // Usar a classe Actions para mover o cursor para a posição aleatória e clicar
-        actions.moveByOffset(randomX, randomY).click().perform();
+    public void actionMoveElementPerform(By locator) {
+        if(this.action == null) {
+            this.action = new Actions(this.driver);
+        }
+        WebElement element = this.driver.findElement(locator);
+        action.moveToElement(element);
+    }
+    public void actionMoveClickPerform(By locator) {
+        if(this.action == null) {
+            this.action = new Actions(this.driver);
+        }
+        WebElement element = this.driver.findElement(locator);
+        action.moveToElement(element).click().build().perform();
+    }
+    public void selectByValue(By locator, String value) {
+        select = new Select(findElement(locator));
+        select.selectByValue(value);
     }
 
 }

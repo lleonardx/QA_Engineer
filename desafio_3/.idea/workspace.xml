@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarSugestao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../desafio_2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../desafio_2/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" afterDir="false" />
@@ -19,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,7 +49,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/desafio_qa/QA_Engineer/desafio_3",
+    "last_opened_file_path": "C:/QA_Engineer/desafio_3",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
@@ -59,7 +61,7 @@
       <recent name="dev.leonardo.automation.trivago" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuscarManausTest.test">
+  <component name="RunManager" selected="JUnit.BuscarManausTest.TrivagoComplete">
     <configuration name="BuscarManausTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desafio_3" />
       <extension name="coverage">
@@ -71,6 +73,38 @@
       <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
       <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuscarManausTest.TrivagoComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desafio_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.leonardo.automation.trivago.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
+      <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
+      <option name="METHOD_NAME" value="TrivagoComplete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuscarManausTest.TrivagoSite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desafio_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.leonardo.automation.trivago.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
+      <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
+      <option name="METHOD_NAME" value="TrivagoSite" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuscarManausTest.TrivagoComplete" />
+        <item itemvalue="JUnit.BuscarManausTest.TrivagoSite" />
         <item itemvalue="JUnit.BuscarManausTest.test" />
         <item itemvalue="JUnit.BuscarManausTest" />
       </list>
@@ -108,5 +144,10 @@
       <updated>1700185277175</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
 </project>
