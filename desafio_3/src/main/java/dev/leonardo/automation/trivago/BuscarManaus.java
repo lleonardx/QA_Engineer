@@ -47,9 +47,12 @@ public class BuscarManaus extends BasePage {
         Thread.sleep(10000);
         if(super.isDisplayed(menuSugestionLocator)){
             super.actionMoveClickPerform(menuSugestionLocator);
-            super.findElement(subMenuSugestionLocator);
-            super.actionMoveElementPerform(sugestionLocator);
+            String opcaoVisivel = "Avaliação e sugestões";
+            super.selectByVisibleText(subMenuSugestionLocator, opcaoVisivel);
             super.click(sugestionLocator);
+            Thread.sleep(5000);
+            super.clickRandomLocation();
+            super.takeScreenshot("sugestao");
         }else{
             System.out.println("menu sugestion was not found");
         }

@@ -1,17 +1,16 @@
 package dev.leonardo.automation.trivago;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.interactions.Actions;
+import org.apache.commons.io.FileUtils;
 
-import javax.swing.*;
-import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Random;
 
@@ -90,6 +89,47 @@ public abstract class BasePage {
     public void selectByValue(By locator, String value) {
         select = new Select(findElement(locator));
         select.selectByValue(value);
+    }
+    public void selectByVisibleText(By selectLocator, String visibleText) {
+        WebElement selectElement = findElement(selectLocator);
+
+        if ("select".equalsIgnoreCase(selectElement.getTagName())) {
+            Select dropdown = new Select(selectElement);
+            dropdown.selectByVisibleText(visibleText);
+        } else {
+            System.out.println("O elemento não é um elemento <select>.");
+        }
+    }
+    public void takeScreenshot(String fileName) {
+        // Captura a tela como um arquivo de imagem
+        File screenshotFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+
+        // Define o diretório de destino para salvar a captura de tela
+        String destinationDirectory = "screenshots/";
+        String filePath = destinationDirectory + fileName + ".png";
+
+        try {
+            // Copia o arquivo de imagem para o diretório de destino
+            FileUtils.copyFile(screenshotFile, new File(filePath));
+            System.out.println("Screenshot salvo em: " + filePath);
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar a captura de tela: " + e.getMessage());
+        }
+    }
+    public void clickRandomLocation() {
+        // Obter as dimensões da janela do navegador
+        int windowWidth = driver.manage().window().getSize().width;
+        int windowHeight = driver.manage().window().getSize().height;
+
+        // Criar uma instância da classe Random
+        Random random = new Random();
+
+        // Gerar coordenadas aleatórias dentro das dimensões da janela
+        int randomX = random.nextInt(windowWidth);
+        int randomY = random.nextInt(windowHeight);
+
+        // Usar a classe Actions para mover o cursor para a posição aleatória e clicar
+        action.moveByOffset(randomX, randomY).click().perform();
     }
 
 }

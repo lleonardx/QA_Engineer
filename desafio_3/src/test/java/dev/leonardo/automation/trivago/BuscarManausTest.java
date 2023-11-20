@@ -34,6 +34,6 @@ class BuscarManausTest {
         buscarManaus.inserirDestino();
         //then
         buscarManaus.viewSugestion();
-
+        Assertions.assertFalse(this.URL.equals(buscarManaus.getCurrentUrl()));
     }
 }
