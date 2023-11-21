@@ -3,6 +3,7 @@ package dev.leonardo.automation.trivago;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,7 +26,9 @@ public class BuscarManaus extends BasePage {
     private By subMenuSugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
     private By titlePageSugestionLocator = By.cssSelector("#sorting-selector");
     private By sugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
-    private By avaliationLocator = By.xpath("//*[@id=\"__next\"]/div/main/div[3]/div[1]/div[1]/div[2]/div/div/ol/li[1]/div/article/div[2]/div[1]/button[2]");
+    private By avaliationLocator = By.cssSelector("button[data-testid='rating-section']");
+    private By hotelNameLocator = By.cssSelector("span[itemprop='name']");
+    private By ratingLocator = By.cssSelector("span.text-nux-heading-l strong");
 
     public void inserirDestino() throws AWTException, InterruptedException {
         super.findElement(cityNameLocator).click();
@@ -39,6 +42,8 @@ public class BuscarManaus extends BasePage {
         Thread.sleep(5000);
         super.findElement(searchbttnLocator);
         super.click(searchbttnLocator);
+        Thread.sleep(10000);
+        super.takeScreenshot("acesso ao site");
     }
     public String getButtonMessage(){
         super.waitVisibilityOfElementLocated(cityNameLocator);
@@ -58,6 +63,11 @@ public class BuscarManaus extends BasePage {
             super.findElement(avaliationLocator);
             super.click(avaliationLocator);
             Thread.sleep(3000);
+            super.findElement(avaliationLocator);
+            super.actionMoveElementPerform(avaliationLocator);
+            super.findElement(hotelNameLocator);
+            super.findElement(ratingLocator);
+            Thread.sleep(3000);
             super.takeScreenshot("sugestao");
         }else{
             System.out.println("menu sugestion was not found");
@@ -65,6 +75,19 @@ public class BuscarManaus extends BasePage {
     }
     public String getTitleSugestion(){
         return super.getText(titlePageSugestionLocator);
+    }
+
+    public String getHotelName() {
+        super.waitVisibilityOfElementLocated(hotelNameLocator, Duration.ofSeconds(10));
+        WebElement hotelNameElement = super.findElement(hotelNameLocator);
+        return hotelNameElement.getText();
+    }
+
+    public double getRating() {
+        super.waitVisibilityOfElementLocated(ratingLocator, Duration.ofSeconds(10));
+        WebElement ratingElement = super.findElement(ratingLocator);
+        String ratingText = ratingElement.getText();
+        return Double.parseDouble(ratingText);
     }
 
 

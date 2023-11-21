@@ -19,21 +19,28 @@ class BuscarManausTest {
     }
     @AfterEach
     void tearDown() throws Exception {
-        //buscarManaus.quitWebDriver();
+        buscarManaus.quitWebDriver();
     }
     @Test
     void TrivagoSite() throws AWTException, InterruptedException {
-        //when
+        /* when */
         buscarManaus.inserirDestino();
-        //then
-        Assertions.assertTrue(this.URL.equals(buscarManaus.getCurrentUrl()));
+        /* then */
+        Assertions.assertNotEquals(this.URL, buscarManaus.getCurrentUrl());
     }
     @Test
     void TrivagoComplete() throws InterruptedException, AWTException {
-        //when
+        /* when */
         buscarManaus.inserirDestino();
-        //then
+        /* then */
         buscarManaus.viewSugestion();
-        Assertions.assertFalse(this.URL.equals(buscarManaus.getCurrentUrl()));
+        Assertions.assertNotEquals(this.URL, buscarManaus.getCurrentUrl());
+
+        String hotelName = buscarManaus.getHotelName();
+        double rating = buscarManaus.getRating();
+
+        Assertions.assertEquals("Amazonia Tower", hotelName);
+        Assertions.assertEquals(6.5, rating, 0.1);
+
     }
 }
