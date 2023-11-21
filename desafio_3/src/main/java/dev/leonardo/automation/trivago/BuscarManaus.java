@@ -29,6 +29,7 @@ public class BuscarManaus extends BasePage {
     private By avaliationLocator = By.cssSelector("button[data-testid='rating-section']");
     private By hotelNameLocator = By.cssSelector("span[itemprop='name']");
     private By ratingLocator = By.cssSelector("span.text-nux-heading-l strong");
+    private By precoLocator = By.cssSelector("[data-testid='recommended-price']");
 
     public void inserirDestino() throws AWTException, InterruptedException {
         super.findElement(cityNameLocator).click();
@@ -89,9 +90,10 @@ public class BuscarManaus extends BasePage {
         String ratingText = ratingElement.getText();
         return Double.parseDouble(ratingText);
     }
-
-
-
-
+    public String getPreco() {
+        super.waitVisibilityOfElementLocated(precoLocator, Duration.ofSeconds(10));
+        WebElement precoElement = super.findElement(precoLocator);
+        return precoElement.getText().trim();
+    }
 
 }

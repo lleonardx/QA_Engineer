@@ -38,9 +38,17 @@ class BuscarManausTest {
 
         String hotelName = buscarManaus.getHotelName();
         double rating = buscarManaus.getRating();
+        String precoHotel = buscarManaus.getPreco();
+        String precoSimbolo = precoHotel.replace("R$", "").trim();
+        double precoNumerico = Double.parseDouble(precoSimbolo);
+
+        //valores da hospedagem
+        double valorMinimo = 100.0;
+        double valorMaximo = 200.0;
 
         Assertions.assertEquals("Amazonia Tower", hotelName);
         Assertions.assertEquals(6.5, rating, 0.1);
+        Assertions.assertTrue(precoNumerico >= valorMinimo && precoNumerico <= valorMaximo, "O preço está fora da faixa.");
 
     }
 }
