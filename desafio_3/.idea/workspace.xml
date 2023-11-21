@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/screenshots/sugestao.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/sugestao.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" afterDir="false" />
+>>>>>>> d933f304d3b5ea12fb74450313fda2df082e4977
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,20 +40,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/desafio_qa/QA_Engineer/desafio_3",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/QA_Engineer/desafio_3/drivers&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\QA_Engineer\desafio_3\drivers" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -55,7 +64,7 @@
       <recent name="dev.leonardo.automation.trivago" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuscarManausTest.test">
+  <component name="RunManager" selected="JUnit.BuscarManausTest.TrivagoSite">
     <configuration name="BuscarManausTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desafio_3" />
       <extension name="coverage">
@@ -67,6 +76,38 @@
       <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
       <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuscarManausTest.TrivagoComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desafio_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.leonardo.automation.trivago.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
+      <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
+      <option name="METHOD_NAME" value="TrivagoComplete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BuscarManausTest.TrivagoSite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="desafio_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.leonardo.automation.trivago.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.leonardo.automation.trivago" />
+      <option name="MAIN_CLASS_NAME" value="dev.leonardo.automation.trivago.BuscarManausTest" />
+      <option name="METHOD_NAME" value="TrivagoSite" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -89,6 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BuscarManausTest.TrivagoSite" />
+        <item itemvalue="JUnit.BuscarManausTest.TrivagoComplete" />
         <item itemvalue="JUnit.BuscarManausTest.test" />
         <item itemvalue="JUnit.BuscarManausTest" />
       </list>
@@ -104,5 +147,10 @@
       <updated>1700185277175</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
   </component>
 </project>

@@ -18,20 +18,53 @@ public class BuscarManaus extends BasePage {
     private By dateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[1]/fieldset/button[1]/span/span[2]/span[2]");
     private By checkInDateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div[2]/button[32]/time");
     private By checkOutDateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[2]/div/div/div/div[2]/div/div[2]/div[2]/button[7]/time");
-    private By searchbttnLocator = By.className("SearchButton_floatingSearchButton__ywzpY");
+    private By searchbttnLocator = By.cssSelector("#__next > div.min-h-screen > div.mb-6.bg-gradient-to-br.from-white.to-grey-200 > section > div.mx-auto.Wrapper_box__4K_5d.px-4.\\32 xs\\:px-5.l\\:px-10.\\32 xl\\:px-5 > div.fresnel-container.fresnel-greaterThanOrEqual-2xl > div > button");
 
-    public void inserirDestino() throws AWTException {
+    //SUGESTAO
+    private By menuSugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]");
+    private By subMenuSugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
+    private By titlePageSugestionLocator = By.cssSelector("#sorting-selector");
+    private By sugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
+    private By avaliationLocator = By.xpath("//*[@id=\"__next\"]/div/main/div[3]/div[1]/div[1]/div[2]/div/div/ol/li[1]/div/article/div[2]/div[1]/button[2]");
+
+    public void inserirDestino() throws AWTException, InterruptedException {
         super.findElement(cityNameLocator).click();
-        super.type("Manaus",cityNameLocator);
+        Thread.sleep(3000);
+        super.findElement(cityNameLocator);
+        super.type("Manaus", cityNameLocator);
+        Thread.sleep(3000);
         super.click(dateLocator);
         super.click(checkInDateLocator);
         super.click(checkOutDateLocator);
-        super.clickRandomLocation();
+        Thread.sleep(5000);
+        super.findElement(searchbttnLocator);
         super.click(searchbttnLocator);
     }
     public String getButtonMessage(){
-        super.waitVisibilityOfElementLocated(searchbttnLocator);
-        return super.getText(searchbttnLocator);
+        super.waitVisibilityOfElementLocated(cityNameLocator);
+        return super.getText(cityNameLocator);
+    }
+    public void viewSugestion() throws InterruptedException {
+        Thread.sleep(10000);
+        if(super.isDisplayed(menuSugestionLocator)){
+            super.actionMoveClickPerform(menuSugestionLocator);
+            String opcaoVisivel = "Avaliação e sugestões";
+            super.selectByVisibleText(subMenuSugestionLocator, opcaoVisivel);
+            super.click(sugestionLocator);
+            Thread.sleep(5000);
+            //super.clickRandomLocation();
+            //Thread.sleep(5000);
+
+            super.findElement(avaliationLocator);
+            super.click(avaliationLocator);
+            Thread.sleep(3000);
+            super.takeScreenshot("sugestao");
+        }else{
+            System.out.println("menu sugestion was not found");
+        }
+    }
+    public String getTitleSugestion(){
+        return super.getText(titlePageSugestionLocator);
     }
 
 
