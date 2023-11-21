@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
