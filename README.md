@@ -15,5 +15,13 @@
  - Automação de Teste API
  > Requisições de Criação de Usuário, verificação do usuário criado, autenticação de token, criação de produto e verificação de produto criado.
 
+ - Features
+<ol>
+	<li><code>Configuração de Testes Selenium WebDriver + Java</code></li>
+	<li><code>WebDriver</code></li>
+	<li><code>Actions</code></li>
+	<li><code>WebDriverWait</code></li>
+	<li><code>Select</code></li>
+</ol>
 
  ## Tecnologias Utilizadas: Java, Selenium e JUnit.
