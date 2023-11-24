@@ -29,7 +29,8 @@ docker run -p 3000:3000 paulogoncalvesbh/serverest:latest
 ## Variáveis de Ambiente
 Para configuração do projeto, é necessário:
 - Download do "Webdriver" compatível com a versão do navegador. Foi utilizado o Chrome driver.
-- Download do Selenium pelo site do "Maven Repository" - Selenium Chrome driver.
+- Download do "Selenium" pelo site do "Maven Repository" - Selenium Chrome Driver.
+- Download do "JUnit" pelo site do "Maven Repository" - JUnit.
 - Colocar as dependencias no arquivo "pom.xlm"
 - Na raiz do projetom criar uma pasta, para armazenar o driver. Ex: drivers/chromedriver.exe
 
