@@ -15,7 +15,7 @@
  - Automação de Teste API
  > Requisições de Criação de Usuário, verificação do usuário criado, autenticação de token, criação de produto e verificação de produto criado.
 <br>
-Obs: Utilizar o seguinte comando, para rodar a API localmente.
+Obs: Utilizar o seguinte comando, para rodar a API localmente com docker:
 
 ```
 docker run -p 3000:3000 paulogoncalvesbh/serverest:latest
