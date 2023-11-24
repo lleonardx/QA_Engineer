@@ -1,6 +1,6 @@
 # Desafio - QA_Engineer
 
- - Fundamentos de Teste
+- Fundamentos de Teste:
 > Elaboração de Plano de Teste.
 > Levantamento de Cenários de Teste.
 > Reporte de Falhas Encontradas.
@@ -14,12 +14,26 @@
 
  - Automação de Teste API
  > Requisições de Criação de Usuário, verificação do usuário criado, autenticação de token, criação de produto e verificação de produto criado.
-> Obs: Utilizado o seguinte comando, para rodar a API localmente.
+<br>
+Obs: Utilizar o seguinte comando, para rodar a API localmente.
+
 ```
 docker run -p 3000:3000 paulogoncalvesbh/serverest:latest
 ```
 
- - Features
+## Documentação
+[Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/)
+
+[Maven Repository](https://mvnrepository.com/)
+
+## Variáveis de Ambiente
+Para configuração do projeto, é necessário:
+- Download do "Webdriver" compatível com a versão do navegador. Foi utilizado o Chrome driver.
+- Download do Selenium pelo site do "Maven Repository" - Selenium Chrome driver.
+- Colocar as dependencias no arquivo "pom.xlm"
+- Na raiz do projetom criar uma pasta, para armazenar o driver. Ex: drivers/chromedriver.exe
+
+## Features
 <ol>
 	<li><code>Configuração de Testes Selenium WebDriver + Java</code></li>
 	<li><code>WebDriver</code></li>
@@ -28,4 +42,5 @@ docker run -p 3000:3000 paulogoncalvesbh/serverest:latest
 	<li><code>Select</code></li>
 </ol>
 
- ## Tecnologias Utilizadas: Java, Selenium e JUnit.
+ ## Tecnologias Utilizadas
+ - Java, Selenium e JUnit.
