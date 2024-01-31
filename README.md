@@ -56,4 +56,4 @@ Para configuração do projeto, é necessário:
 </ol>
 
  ## Tecnologias Utilizadas
- - Java, Selenium e JUnit.
+ - Java, Selenium, JUnit e Postman.
