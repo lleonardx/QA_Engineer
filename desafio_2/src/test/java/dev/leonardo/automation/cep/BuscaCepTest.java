@@ -42,4 +42,22 @@ class BuscaCepTest{
         String actual = this.buscaCep.getButtonMessage();
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    void TestComplete(){
+        //when
+        buscaCep.insertCepNumber();
+        //then
+        String expected = "Rua Miranda Leão";
+        String actual = this.buscaCep.getButtonMessage();
+        Assertions.assertEquals(expected, actual);
+        //when
+        buscaCep.returnInitialPage();
+        //then
+        buscaCep.insertCepNumber();
+        //then
+        String expected1 = "Rua Miranda Leão";
+        String actual1 = this.buscaCep.getButtonMessage();
+        Assertions.assertEquals(expected1, actual1);
+    }
 }

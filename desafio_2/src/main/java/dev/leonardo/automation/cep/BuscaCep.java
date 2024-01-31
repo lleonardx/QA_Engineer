@@ -7,6 +7,9 @@ public class BuscaCep extends BasePage {
     private By cepLocator = By.id("endereco");
     private By searchButtonLocator = By.id("btn_pesquisar");
     private By newSearchBttnLocator = By.xpath("//*[@id=\"resultado-DNEC\"]/tbody/tr/td[1]");
+    private By backButtonLocator = By.id("btn_nbusca");
+
+
 
     public void insertCepNumber() {
         if(super.isDisplayed(cepLocator)) {
@@ -27,5 +30,14 @@ public class BuscaCep extends BasePage {
     public String getButtonMessage(){
         super.waitVisibilityOfElementLocated(newSearchBttnLocator);
         return super.getText(newSearchBttnLocator);
+    }
+
+    public void returnInitialPage(){
+        if(super.isDisplayed(cepLocator)) {
+            super.type("69005-040", cepLocator);
+            super.click(searchButtonLocator);
+        }else {
+            super.click(backButtonLocator);
+        }
     }
 }
