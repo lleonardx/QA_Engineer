@@ -19,7 +19,7 @@ public class BuscarManaus extends BasePage {
     private By dateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[1]/fieldset/button[1]/span/span[2]/span[2]");
     private By checkInDateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[2]/div/div/div/div[2]/div/div[1]/div[2]/button[32]/time");
     private By checkOutDateLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section/div[2]/div[4]/div/div[2]/div/div/div/div[2]/div/div[2]/div[2]/button[7]/time");
-    private By searchbttnLocator = By.cssSelector("#__next > div.min-h-screen > div.mb-6.bg-gradient-to-br.from-white.to-grey-200 > section > div.mx-auto.Wrapper_box__4K_5d.px-4.\\32 xs\\:px-5.l\\:px-10.\\32 xl\\:px-5 > div.fresnel-container.fresnel-greaterThanOrEqual-2xl > div > button");
+    private By searchbttnLocator = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/section[1]/div[2]/div[4]/div/button/span/span");
 
     //SUGESTAO
     private By menuSugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]");
@@ -28,7 +28,7 @@ public class BuscarManaus extends BasePage {
     private By sugestionLocator = By.xpath("//*[@id=\"sorting-selector\"]/option[2]");
     private By avaliationLocator = By.cssSelector("button[data-testid='rating-section']");
     private By hotelNameLocator = By.cssSelector("span[itemprop='name']");
-    private By ratingLocator = By.cssSelector("span.text-nux-heading-l strong");
+    private By ratingLocator = By.cssSelector("span[itemprop='ratingValue']");
     private By precoLocator = By.cssSelector("[data-testid='recommended-price']");
 
     public void inserirDestino() throws AWTException, InterruptedException {

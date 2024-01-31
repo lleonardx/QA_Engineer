@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="" />
+    <list default="true" id="3cff02f2-d45d-4573-994e-859c6aad257f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/acesso ao site.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/acesso ao site.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/sugestao.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/sugestao.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/leonardo/automation/trivago/BuscarManaus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/leonardo/automation/trivago/BuscarManausTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,13 +43,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "JUnit.BuscarManausTest.TrivagoComplete.executor": "Run",
+    "JUnit.BuscarManausTest.TrivagoSite.executor": "Run",
+    "JUnit.BuscarManausTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/estudos/projetos-java/TestApiRest",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/desafio_qa/QA_Engineer/desafio_3",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
@@ -56,7 +68,7 @@
       <recent name="dev.leonardo.automation.trivago" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BuscarManausTest.TrivagoComplete">
+  <component name="RunManager" selected="JUnit.BuscarManausTest">
     <configuration name="BuscarManausTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="desafio_3" />
       <extension name="coverage">
@@ -122,12 +134,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BuscarManausTest.TrivagoComplete" />
         <item itemvalue="JUnit.BuscarManausTest" />
+        <item itemvalue="JUnit.BuscarManausTest.TrivagoComplete" />
         <item itemvalue="JUnit.BuscarManausTest.TrivagoSite" />
         <item itemvalue="JUnit.BuscarManausTest.test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
